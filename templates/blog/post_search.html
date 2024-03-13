@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ tags }} 태그 검색 결과</title>
+</head>
+<body>
+    <h2>'{{ tags }}'에 대한 검색 결과</h2>
+    {% if posts %}
+        <ul>
+            {% for post in posts %}
+                <li>
+                    <h3>{{ post.title }}</h3>
+                    <p>{{ post.contents }}</p>
+                    <p><small>작성일: {{ post.created_at|date:"Y-m-d H:i" }}</small></p>
+                </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>해당 태그를 포함하는 게시글이 없습니다.</p>
+    {% endif %}
+</body>
+</html>

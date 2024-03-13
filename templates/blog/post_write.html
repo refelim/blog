@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>글쓰기 페이지</title>
+</head>
+<body>
+    <h1>글쓰기 페이지</h1>
+    <form method="POST">
+        {% csrf_token %}
+        태그 <input type="text" name="tags" placeholder="태그를 콤마로 구분하여 입력하세요. 예: a, b, c"><br>
+        제목 <br>
+        <input type="text" name="title"><br>
+        내용 <br>
+        <textarea rows="10" cols="50" name="contents"></textarea><br>
+        <input type="file" name="img"><br>
+        
+        <input type="submit" value="글쓰기">
+    </form>
+</body>
+</html>

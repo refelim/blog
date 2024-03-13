@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>글 삭제</title>
+</head>
+<body>
+        
+    <form method="POST">
+        {% csrf_token %}
+        <h3>{{ Post.title }} - 삭제하기</h3>
+        <button>삭제</button>
+    </form>
+    <a href="{% url 'main' %}">메인 페이지로 가기</a>
+    
+
+</body>
+</html>

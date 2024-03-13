@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <h1> 번호 {{posts.id}} </h1>
+    # {% for tag in posts.tags.all %} 
+    {{ tag.name }}
+    {% if not forloop.last %}, {% endif %}
+    {% endfor %}
+    <h1>게시물 제목 : {{posts.title}} </h1>
+    <p>게시물 내용 : {{posts.contents}}</p>
+    {% if post.img %}
+    <img src = "{{ post.img.url }}" alt="PICTURE" height="200px">
+    <br>
+{% endif %}
+</body>
+</html>

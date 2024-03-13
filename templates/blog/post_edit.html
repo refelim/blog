@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Post edit</title>
+</head>
+<body>
+    <h1>Post edit</h1>
+
+    <form method="POST">
+        {% csrf_token %}
+        제목<br>
+        <input type="text" name="title" vaule="{{post.title}}"><br>
+        내용<br>
+        <textarea rows="10" cols="50" name="contents" vaule="{{post.contents}}"></textarea><br>
+        <input type="file" name="img"><br>
+        <input type="submit" value="수정하기">
+    </form>
+    <button><a href="{ % url 'main' % }">메인</a></button><br>
+
+
+</body>
+</html>
