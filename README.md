@@ -1,10 +1,10 @@
-blog
+# blog
 ---
-기능
-1. main
+## 기능
+### 1. main
    - username 표시
    - 회원가입, 로그인, 로그아웃, 블로그 들어가기 링크
-2. blog
+### 2. blog
    - 게시글 작성
      - 로그인을 한 유저만 해당 기능 사용
      - 제목과 내용 작성가능
@@ -27,7 +27,7 @@ blog
      - 게시글을 삭제 하는 기능
      - 삭제를 완료한 이후에 게시글 목록 화면으로 돌아감
      - 삭제된 게시글은 게시글 목록보기/상세보기에서 접근이 불가능
-3. users
+### 3. users
    - 회원가입
      - 회원가입 기능
      - username, password, 프로필 사진 입력
@@ -35,25 +35,25 @@ blog
      - 로그인 기능
      - username, password 입력
 ---
-개발 환경
-- 사용 툴
+## 개발 환경
+### - 사용 툴
   - VSCode
-- 사용 언어
+### - 사용 언어
   - HTML, CSS, JS
   - Python
-- Web Framework
+### - Web Framework
   - Django
-- 서비스 배포
+### - 서비스 배포
   - AWS
 ---
-URL 구조 (모놀리식)
-- App main
+## URL 구조 (모놀리식)
+### - App main
 
 |URL|Views Function|HTML FILE NAME|NOTE|
 |------|---|---|---|
 |''|main|main.html|index|
 
-- App blog
+### - App blog
 
 |URL|Views Function|HTML FILE NAME|NOTE|
 |------|---|---|---|
@@ -63,6 +63,8 @@ URL 구조 (모놀리식)
 |'blog/delete/<<int:pk>>'|post_delete|blog/post_delete.html|게시글 삭제|
 |'blog/edit/<<int:pk>>'|post_edit|blog/post_edit.html|게시글 수정|
 |'blog/search/<<str:tags>>'|post_search|blog/post_search.html|태그를 통한 게시글 검색|
+
+### - App users
 
 |URL|Views Function|HTML FILE NAME|NOTE|
 |------|---|---|---|
