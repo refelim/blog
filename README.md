@@ -39,7 +39,7 @@
 ### - 사용 툴
   - VSCode
 ### - 사용 언어
-  - HTML, CSS, JS
+  - HTML, JS
   - Python
 ### - Web Framework
   - Django
