@@ -44,7 +44,7 @@
 ### - Web Framework
   - Django
 ### - 서비스 배포
-  - AWS
+  - AWS(미구현)
 ---
 ## URL 구조 (모놀리식)
 ### - App main
