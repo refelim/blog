@@ -46,7 +46,7 @@
 ### - 서비스 배포
   - AWS(미구현)
 ---
-## URL 구조 (모놀리식)
+## URL 구조
 ### - App main
 
 |URL|Views Function|HTML FILE NAME|NOTE|
