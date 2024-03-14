@@ -71,3 +71,27 @@
 |users/login|login_view|users/login.html|로그인|
 |users/logout|logout_view|x|로그아웃|
 |users/register|register|users/register.html|회원가입|
+
+---
+## 트러블 슈팅
+
+1. templatesError
+   ```
+   return render(request, "/users/register.html", context)
+   ```
+   templeates, urls, views 다 문제 없었지만, 연결 html 경로 제일 앞에 / 있어서 templatesError가 계속 나왔음
+   
+2.  태그가 DB에 들어왔지만, tag가 계속 None으로 보이는 상황
+   ```
+   # {% for post in posts %} 
+            <li>번호 : {{ forloop.counter }} # {{post.tags}}
+                <h1>제목 : <a href ="/blog/{{ post.id }}/">{{ post.title }}</a></h1>      
+   ```
+   ->
+   ```
+    # {% for tag in posts.tags.all %} 
+    {{ tag.name }}
+       {% if not forloop.last %}, {% endif %}
+    {% endfor %}
+   ```
+
